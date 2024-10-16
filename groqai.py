@@ -4,13 +4,14 @@ import os
 from groq import Groq 
 import random  
 
-from langchain.chains import ConversationChain  
+from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory  
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv 
 import os 
 
+#hi there
 # Load environment variables from the .env file
 load_dotenv()
 
@@ -83,6 +84,7 @@ def main():
     except Exception as e:
         st.error(f"Error initializing conversation chain: {e}")
         st.stop()  # Stop the app if conversation chain cannot be initialized
+
 
     # If the user has submitted a question, process it
     if user_question:
